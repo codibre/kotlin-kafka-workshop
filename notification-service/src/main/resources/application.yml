@@ -1,0 +1,15 @@
+logging:
+  level:
+    org:
+      apache:
+        kafka: ERROR
+server:
+  port: 8081
+  shutdown: graceful
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 25s
+  application:
+    name: NotificationService
+  profiles:
+    active: development

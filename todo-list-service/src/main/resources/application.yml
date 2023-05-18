@@ -1,0 +1,15 @@
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 25s
+  application:
+    name: TodoListService
+  profiles:
+    active: development
+logging:
+  level:
+    org:
+      apache:
+        kafka: ERROR
+server:
+  port: 8080
+  shutdown: graceful
