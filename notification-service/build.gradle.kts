@@ -29,6 +29,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
     implementation(project(":domain-events"))
+    implementation("org.springframework.boot:spring-boot-gradle-plugin:3.0.6")
 }
 
 tasks.withType<KotlinCompile> {
