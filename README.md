@@ -46,7 +46,13 @@ $ sdk use java 17.0.4-amzn
 $ java -version
 ```
 
-### Passo 4: Construindo a Aplicação usando o Gradle Wrapper
+### Passo 4: Clone a aplicação
+
+```console
+$ git clone git@bitbucket.org:maxmilhas/kafka-workshop.git
+```
+
+### Passo 5: Construindo a Aplicação usando o Gradle Wrapper
 1. Abra um terminal ou prompt de comando.
 2. Navegue até o diretório do projeto.
 3. Execute o seguinte comando para construir a aplicação:
