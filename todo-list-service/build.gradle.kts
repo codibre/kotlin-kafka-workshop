@@ -30,6 +30,8 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
     implementation(project(":domain-events"))
     implementation("org.springframework.boot:spring-boot-gradle-plugin:3.0.6")
+    implementation("com.github.codibre.messengerk:spring-boot-starter:1.0.1-alpha")
+
 }
 
 tasks.withType<KotlinCompile> {
