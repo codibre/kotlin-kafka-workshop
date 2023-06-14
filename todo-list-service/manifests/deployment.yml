@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: app
-          image:  todo-list-service:latest
+          image:  jojovem/todo-list-service:latest
           imagePullPolicy: Always
           resources:
             requests:
