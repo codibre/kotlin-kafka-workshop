@@ -24,8 +24,8 @@ spec:
     spec:
       containers:
         - name: app
-          image:  jojovem/todo-list-service:1.0.0
           imagePullPolicy: Always
+          image:  jojovem/todo-list-service:latest
           resources:
             requests:
               memory: "512Mi"
