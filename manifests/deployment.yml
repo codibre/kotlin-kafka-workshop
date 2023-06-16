@@ -6,7 +6,7 @@ metadata:
     version: 1.0.1
     env: dev
   name: todo-list-deployment
-  namespace: todo-list-service
+  namespace: todo-list-service_2
 spec:
   replicas: 1
   selector:
