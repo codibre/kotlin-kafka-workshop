@@ -6,7 +6,7 @@ metadata:
     version: 1.0.1
     env: dev
   name: todo-list-deployment
-  namespace: todo-list-service-2
+  namespace: todo-list-service
 spec:
   replicas: 1
   selector:
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: app
-          image:  jojovem/todo-list-service:latest
+          image:  jojovem/todo-list-service:1.0.1
           imagePullPolicy: Always
           resources:
             requests:
