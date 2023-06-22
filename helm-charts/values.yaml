@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: jojovem/todo-list-service:latest
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+
+namespace:
+  name: todo-list-service-helm
+
+labels:
+  app:
+    name: todo-list-service-helm
+    version: 1.x.x
+    env: uat
