@@ -1,4 +1,0 @@
-apiVersion: v2
-name: todo-list-service-helm-app
-description: A Helm chart for Block Buster App
-version: 1.0.0
