@@ -25,7 +25,7 @@ spec:
       containers:
         - name: app
           imagePullPolicy: Always
-          image:  jojovem/todo-list-service:latest # {"$imagepolicy" : "flux-system:todo-list-service-policy"}
+          image: jojovem/todo-list-service:1.0.4 # {"$imagepolicy" : "flux-system:todo-list-service-policy"}
           resources:
             requests:
               memory: "512Mi"
