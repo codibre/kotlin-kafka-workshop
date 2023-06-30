@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: todo-list-service
+    version: 1.0.1
+  name: todo-list-deployment
+  namespace: todo-list
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-list-service
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: todo-list-service
+        version: 1.0.1
+    spec:
+      containers:
+        - name: app
+          imagePullPolicy: Always
+          image: jojovem/todo-list-service:1.0.1
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "512m"
+            limits:
+              memory: "4096Mi"
+              cpu: "1024m"
