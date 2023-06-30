@@ -5,7 +5,7 @@ metadata:
     app: todo-list-service
     version: 1.0.1
   name: todo-list-deployment
-  namespace: todo-list
+  namespace: todo-list-service
 spec:
   replicas: 1
   selector:

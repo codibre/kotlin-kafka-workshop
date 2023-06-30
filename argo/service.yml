@@ -4,7 +4,7 @@ metadata:
   labels:
     app: todo-list-service
   name: todo-list-service
-  namespace: todo-list
+  namespace: todo-list-service
 spec:
   ports:
     - port: 8080
