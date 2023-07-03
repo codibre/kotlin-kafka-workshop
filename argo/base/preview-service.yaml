@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    app: rollout-todo-list-service
   name: preview-todo-list-service
   namespace: todo-list
 spec:

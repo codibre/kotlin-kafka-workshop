@@ -8,11 +8,6 @@ spec:
   selector:
     matchLabels:
       app: todo-list-service
-  strategy:
-    blueGreen:
-      autoPromotionEnabled: false
-      activeService: todo-list-service
-      previewService: preview-todo-list-service
   template:
     metadata:
       labels:
@@ -29,3 +24,8 @@ spec:
             limits:
               memory: "2048Mi"
               cpu: "1024m"
+  strategy:
+    blueGreen:
+      autoPromotionEnabled: false
+      activeService: todo-list-service
+      previewService: preview-todo-list-service
