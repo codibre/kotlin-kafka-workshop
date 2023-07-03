@@ -7,7 +7,7 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: rollout-todo-list-service
+      app: todo-list-service
   strategy:
     blueGreen:
       autoPromotionEnabled: false
