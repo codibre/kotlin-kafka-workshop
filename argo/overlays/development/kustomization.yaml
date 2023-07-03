@@ -1,7 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
+namePrefix: dev-
 kind: Kustomization
 resources:
-  - ../../base
-patchesStrategicMerge:
-- ./cpu_count.yaml
-- ./replica_count.yaml
+- ../../base
+patches:
+- path: ./cpu_count.yaml
+- path: ./replica_count.yaml
