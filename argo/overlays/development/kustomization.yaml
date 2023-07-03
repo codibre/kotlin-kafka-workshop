@@ -4,10 +4,10 @@ resources:
 - ../../base
 patches:
   - target:
-      kind: Deployment
-      name: todo-list-deployment
+      kind: Rollout
+      name: rollout-todo-list-service
     path: ./cpu_count.yaml
   - target:
-      kind: Deployment
-      name: todo-list-deployment
+      kind: Rollout
+      name: rollout-todo-list-service
     path: ./replica_count.yaml
