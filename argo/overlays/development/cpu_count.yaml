@@ -10,6 +10,6 @@ spec:
         - name: todo-list-service-container
           resources:
             requests:
-              cpu: "512m"
+              cpu: "256m"
             limits:
-              cpu: "1024m"
+              cpu: "512m"
