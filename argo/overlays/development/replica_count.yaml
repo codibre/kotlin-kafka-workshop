@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   name: todo-list-deployment
 spec:
-  replicas: 1
+  replicas: 4
