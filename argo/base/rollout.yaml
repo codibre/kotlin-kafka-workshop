@@ -1,15 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  labels:
-    app: todo-list-service
-  name: todo-list-rollout
+  name: rollout-todo-list-service
   namespace: todo-list
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: todo-list-service
+      app: rollout-todo-list-service
   strategy:
     blueGreen:
       autoPromotionEnabled: false
@@ -18,16 +16,16 @@ spec:
   template:
     metadata:
       labels:
-        app: todo-list-service
+        app: rollout-todo-list-service
     spec:
       containers:
         - name: todo-list-service-container
-          imagePullPolicy: Always
           image: jojovem/todo-list-service:1.0.6
+          imagePullPolicy: Always
           resources:
             requests:
-              memory: "512Mi"
+              memory: "1024Mi"
               cpu: "512m"
             limits:
-              memory: "4096Mi"
+              memory: "2048Mi"
               cpu: "1024m"
