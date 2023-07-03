@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - ../../base
 patches:
-  - cpu_count.yaml
-  - replica_count.yaml
+- ./cpu_count.yaml
+- ./replica_count.yaml
