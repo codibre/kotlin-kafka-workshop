@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   labels:
     app: todo-list-service
-    version: 1.0.4
+    version: 1.0.5
   name: todo-list-rollout
   namespace: todo-list
 spec:
@@ -28,12 +28,12 @@ spec:
     metadata:
       labels:
         app: todo-list-service
-        version: 1.0.4
+        version: 1.0.5
     spec:
       containers:
         - name: todo-list-service-container
           imagePullPolicy: Always
-          image: jojovem/todo-list-service:1.0.4
+          image: jojovem/todo-list-service:1.0.5
           resources:
             requests:
               memory: "512Mi"
