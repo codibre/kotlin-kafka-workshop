@@ -4,5 +4,11 @@ kind: Kustomization
 resources:
 - ../../base
 patches:
-- path: ./cpu_count.yaml
-- path: ./replica_count.yaml
+  - target:
+      kind: Deployment
+      name: todo-list-deployment
+    path: ./cpu_count.yaml
+  - target:
+      kind: Deployment
+      name: todo-list-deployment
+    path: ./replica_count.yaml
