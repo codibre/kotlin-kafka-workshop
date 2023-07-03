@@ -13,5 +13,5 @@ spec:
       nodePort: 30001
   selector:
     app: todo-list-service
-    version: 1.0.2
+    version: 1.0.3
   type: NodePort

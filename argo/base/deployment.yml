@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: todo-list-service
-    version: 1.0.2
+    version: 1.0.3
   name: todo-list-deployment
   namespace: todo-list
 spec:
@@ -16,12 +16,12 @@ spec:
     metadata:
       labels:
         app: todo-list-service
-        version: 1.0.2
+        version: 1.0.3
     spec:
       containers:
         - name: todo-list-service-container
           imagePullPolicy: Always
-          image: jojovem/todo-list-service:1.0.2
+          image: jojovem/todo-list-service:1.0.3
           resources:
             requests:
               memory: "512Mi"
