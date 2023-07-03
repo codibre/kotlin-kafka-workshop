@@ -12,5 +12,4 @@ spec:
       targetPort: 8080
   selector:
     app: todo-list-service
-    version: 1.0.5
   type: NodePort
