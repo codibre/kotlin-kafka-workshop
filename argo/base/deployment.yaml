@@ -16,12 +16,12 @@ spec:
     metadata:
       labels:
         app: todo-list-service
-        version: 1.0.3
+        version: 1.0.4
     spec:
       containers:
         - name: todo-list-service-container
           imagePullPolicy: Always
-          image: jojovem/todo-list-service:1.0.3
+          image: jojovem/todo-list-service:1.0.4
           resources:
             requests:
               memory: "512Mi"
