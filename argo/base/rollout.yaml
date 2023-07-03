@@ -15,7 +15,7 @@ spec:
     blueGreen:
       autoPromotionEnabled: false
       activeService: dev-todo-list-service
-      previewService: preview-todo-list-service
+      previewService: dev-preview-todo-list-service
   template:
     metadata:
       labels:
