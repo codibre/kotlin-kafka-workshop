@@ -1,13 +1,13 @@
-apiVersion: apps/v1
+apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   labels:
     app: todo-list-service
-    version: 1.0.3
+    version: 1.0.4
   name: todo-list-rollout
   namespace: todo-list
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: todo-list-service
