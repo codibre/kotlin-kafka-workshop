@@ -13,3 +13,6 @@ spec:
               cpu: "256m"
             limits:
               cpu: "512m"
+  selector:
+    matchLabels:
+      app: rollout-todo-list-service
