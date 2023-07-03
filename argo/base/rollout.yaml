@@ -7,7 +7,7 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: todo-list-service
+      app: rollout-todo-list-service
   template:
     metadata:
       labels:
