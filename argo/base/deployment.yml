@@ -19,7 +19,7 @@ spec:
         version: 1.0.1
     spec:
       containers:
-        - name: app
+        - name: todo-list-service-container
           imagePullPolicy: Always
           image: jojovem/todo-list-service:1.0.1
           resources:
