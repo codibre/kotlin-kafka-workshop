@@ -14,7 +14,7 @@ spec:
   strategy:
     blueGreen:
       autoPromotionEnabled: false
-      activeService: todo-list-service
+      activeService: dev-todo-list-service
       previewService: preview-todo-list-service
   template:
     metadata:
