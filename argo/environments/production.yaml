@@ -5,3 +5,5 @@ resources:
   requests:
     cpu: "300m"
     memory: "1Gi"
+rollout:
+  strategy: canary

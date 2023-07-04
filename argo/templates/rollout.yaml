@@ -31,3 +31,9 @@ spec:
       autoPromotionEnabled: false
       activeService: {{ .Values.app.name }}-active
       previewService: {{ .Values.app.name }}-preview
+    canary:
+      steps:
+        - setWeight: 10
+          pause: # manual resume
+        - setWeight: 50
+          pause:
