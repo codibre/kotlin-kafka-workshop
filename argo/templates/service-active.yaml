@@ -4,7 +4,6 @@ metadata:
   name: todo-list-service-active
   labels:
     app: todo-list-service
-    version: active
 spec:
   ports:
     - port: 8080
@@ -12,5 +11,4 @@ spec:
       targetPort: 8080
   selector:
     app: todo-list-service
-    version: active
   type: NodePort

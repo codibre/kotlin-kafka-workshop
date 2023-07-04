@@ -4,7 +4,6 @@ metadata:
   name: todo-list-service-preview
   labels:
     app: todo-list-service
-    version: preview
 spec:
   ports:
     - port: 8080
@@ -12,5 +11,4 @@ spec:
       targetPort: 8080
   selector:
     app: todo-list-service
-    version: preview
   type: NodePort

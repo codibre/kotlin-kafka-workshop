@@ -5,18 +5,15 @@ metadata:
   namespace: {{ .Values.app.namespace }}
   labels:
     app: {{ .Values.app.name }}
-    version: active
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Values.app.name }}
-      version: active
   template:
     metadata:
       labels:
         app: {{ .Values.app.name }}
-        version: active
     spec:
       containers:
         - name: {{ .Values.app.name }}-container
