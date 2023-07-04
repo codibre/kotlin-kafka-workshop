@@ -3,12 +3,13 @@ kind: Rollout
 metadata:
   name: {{ .Values.app.name }}
   namespace: {{ .Values.app.namespace }}
+  labels:
+    app: todo-list-service
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Values.app.name }}
-      version: active
   template:
     metadata:
       labels:
