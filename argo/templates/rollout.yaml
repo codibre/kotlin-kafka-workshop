@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Values.app.namespace }}
   labels:
     app: {{ .Values.app.name }}
+    version: active
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
