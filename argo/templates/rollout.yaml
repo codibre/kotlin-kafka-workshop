@@ -29,7 +29,9 @@ spec:
   strategy:
     canary:
       steps:
-        - setWeight: 10
-        - pause: {} # manual resume
+        - setWeight: 20
+        - pause: {duration: 30}
         - setWeight: 50
-        - pause: {} # manual resume
+        - pause: {duration: 60}
+        - setWeight: 80
+        - pause: {}
