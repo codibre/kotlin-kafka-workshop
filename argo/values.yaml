@@ -1,7 +1,4 @@
 replicaCount: 2
-image:
-  repository: jojovem/todo-list-service
-  tag: 1.0.3
 resources:
   requests:
     cpu: "200m"
