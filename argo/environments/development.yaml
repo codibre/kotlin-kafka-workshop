@@ -5,5 +5,15 @@ resources:
   requests:
     cpu: "100m"
     memory: "256Mi"
-rollout:
-  strategy: canary
+deploy:
+  strategy:
+    blueGreen:
+      autoPromotionEnabled: false
+      activeService: {{ .Values.app.name }}-active
+      previewService: {{ .Values.app.name }}-preview
+#    canary:
+#      steps:
+#          - setWeight: 10
+#            pause: # manual resume
+#            - setWeight: 50
+#              pause:
