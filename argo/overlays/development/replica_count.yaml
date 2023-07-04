@@ -1,9 +1,0 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
-metadata:
-  name: rollout-todo-list-service
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: rollout-todo-list-service
