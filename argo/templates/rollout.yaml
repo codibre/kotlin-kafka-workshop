@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.app.name }}
   namespace: {{ .Values.app.namespace }}
   labels:
-    app: todo-list-service
+    app: {{ .Values.app.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
