@@ -26,4 +26,10 @@ spec:
             limits:
               cpu: {{ .Values.resources.limits.cpu }}
               memory: {{ .Values.resources.limits.memory }}
-  {{ .Values.deploy.strategy }}
+  strategy:
+    canary:
+      steps:
+        - setWeight: 10
+          pause: # manual resume
+        - setWeight: 50
+          pause:
