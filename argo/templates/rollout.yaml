@@ -27,15 +27,15 @@ spec:
               cpu: {{ .Values.resources.limits.cpu }}
               memory: {{ .Values.resources.limits.memory }}
   strategy:
-{{/*    blueGreen:*/}}
-{{/*      autoPromotionEnabled: false*/}}
-{{/*      activeService: {{ .Values.app.name }}-active*/}}
-{{/*      previewService: {{ .Values.app.name }}-preview*/}}
-    canary:
-      maxSurge: "25%"
-      maxUnavailable: 0
-      steps:
-        - setWeight: 10
-        - pause: {} # pause indefinitely
-        - setWeight: 20
-        - pause: {} # pause indefinitely
+    blueGreen:
+      autoPromotionEnabled: false
+      activeService: {{ .Values.app.name }}-active
+      previewService: {{ .Values.app.name }}-preview
+{{/*    canary:*/}}
+{{/*      maxSurge: "25%"*/}}
+{{/*      maxUnavailable: 0*/}}
+{{/*      steps:*/}}
+{{/*        - setWeight: 10*/}}
+{{/*        - pause: {} # pause indefinitely*/}}
+{{/*        - setWeight: 20*/}}
+{{/*        - pause: {} # pause indefinitely*/}}
