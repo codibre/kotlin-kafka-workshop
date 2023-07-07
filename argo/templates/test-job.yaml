@@ -2,7 +2,6 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: pi
-  namespace: {{ .Values.app.namespace }}
   annotations:
     argocd.argoproj.io/hook: PostSync
 spec:
