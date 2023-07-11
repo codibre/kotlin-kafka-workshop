@@ -28,7 +28,7 @@ spec:
   strategy:
     canary:
       canaryService: {{ .Values.app.name }}-preview
-      stableService: stable-service  {{ .Values.app.name }}-active
+      stableService: {{ .Values.app.name }}-active
       maxSurge: "25%"
       maxUnavailable: 0
       trafficRouting:
