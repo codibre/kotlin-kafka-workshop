@@ -27,8 +27,16 @@ spec:
               memory: {{ .Values.resources.limits.memory }}
   strategy:
     canary:
+      canaryService: {{ .Values.app.name }}-preview
+      stableService: stable-service  {{ .Values.app.name }}-active
       maxSurge: "25%"
       maxUnavailable: 0
+      trafficRouting:
+        nginx:
+          stableIngress: todo-list-service-ingress
+          additionalIngressAnnotations:   # optional
+            canary-by-header: X-Canary
+            canary-by-header-value: iwantsit
       steps:
         - setWeight: 10
         - pause: {} # pause indefinitely
