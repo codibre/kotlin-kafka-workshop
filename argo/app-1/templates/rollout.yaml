@@ -29,8 +29,6 @@ spec:
     canary:
       canaryService: {{ .Values.app.name }}-preview
       stableService: {{ .Values.app.name }}-active
-      maxSurge: "25%"
-      maxUnavailable: 0
       trafficRouting:
         nginx:
           stableIngress: todo-list-service-ingress
