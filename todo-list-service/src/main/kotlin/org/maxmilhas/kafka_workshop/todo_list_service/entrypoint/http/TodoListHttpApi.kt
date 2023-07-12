@@ -11,4 +11,9 @@ class TodoListHttpApi {
         map["result"] = "Todo list created!"
         return map
     }
+
+    @GetMapping("/version", produces = ["text/plain"])
+    fun getVersion(): String {
+        return "1.0.7"
+    }
 }
