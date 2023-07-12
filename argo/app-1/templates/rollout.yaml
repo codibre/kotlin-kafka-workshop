@@ -27,6 +27,7 @@ spec:
               memory: {{ .Values.resources.limits.memory }}
   strategy:
     canary:
+      stickySession: true
       canaryService: {{ .Values.app.name }}-preview
       stableService: {{ .Values.app.name }}-active
       trafficRouting:
