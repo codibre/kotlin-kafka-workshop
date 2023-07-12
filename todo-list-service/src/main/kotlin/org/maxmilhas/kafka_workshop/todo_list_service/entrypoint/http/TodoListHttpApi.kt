@@ -8,7 +8,7 @@ class TodoListHttpApi {
     @GetMapping("/create", produces = ["application/json"])
     fun getIndex(): HashMap<String, String> {
         val map = HashMap<String, String>()
-        map["result"] = "Todo list created!"
+        map["result"] = "Todo list created! 1.0.7"
         return map
     }
 
